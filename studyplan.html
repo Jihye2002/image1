@@ -1,0 +1,65 @@
+<!Doctype html>
+<html lang="ko">
+<meta charset = "UTF-8">
+    <form>
+        <fieldset>
+            <legend>오늘 할 일</legend>
+            <div>
+            <input type="checkbox" id="plan1" name="planner" value="plan1" />
+            <label for="plan1">자격증 복습하고 필기하기</label>
+            </div>
+            <div>
+                <input type="checkbox" id="plan2" name="planner" value="plan2" />
+                <label for="plan2">토익 기출1 풀기(LC)</label>
+            </div>
+            <div>
+                <input type="checkbox" id="plan3" name="planner" value="plan3" />
+                <label for="plan3">토익 기출 10문제 오답(딕테이션)</label>
+            </div>
+            <div>
+                <input type="checkbox" id="plan4" name="planner" value="plan4" />
+                <label for="plan4">RC 강의 듣고 복습습</label>
+            </div>
+        </fieldset>
+    </form>
+</html>
+<style>
+    html {
+        font-family: sans-serif;
+    }
+    
+    form {
+        width: 600px;
+        margin: 0 auto;
+    }
+    
+    div {
+        margin-bottom: 10px;
+    }
+    
+    fieldset {
+        background: #ffffff;
+        border: 3px solid #000000;
+    }
+    
+    legend {
+        padding: 10px;
+        font-size: large;
+        font-weight: bold;
+        color: #000000;
+    }
+</style>
+<script>
+    const otherCheckbox = document.querySelector("#other");
+        const otherText = document.querySelector("#otherValue");
+        otherText.style.visibility = "hidden";
+        
+        otherCheckbox.addEventListener("change", () => {
+        if (otherCheckbox.checked) {
+            otherText.style.visibility = "visible";
+            otherText.value = "";
+        } else {
+            otherText.style.visibility = "hidden";
+        }
+        });
+</script>
